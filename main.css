@@ -30,6 +30,15 @@ body {
     margin: 2rem;
 }
 
+.howToMobile{
+    visibility: hidden;
+    font-family: monospace;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    margin: 0px;
+}
+
 h1{
     font-size: 3rem;
     margin-top: 3rem;
@@ -294,12 +303,13 @@ canvas.shake {
         font-size: 2rem;
         margin-top: 1.5rem;
     }
-
     .howTo{
-        font-family: monospace;
-        font-size: 1rem;
-        color: white;
-        text-align: center;
+        visibility: hidden;
+        height: 0px;
+        margin:0px;
+    }
+    .howToMobile{
+        visibility: visible;
         margin-top: 1rem;
         margin-bottom: 2rem;
     }
