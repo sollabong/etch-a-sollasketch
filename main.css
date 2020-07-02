@@ -28,6 +28,7 @@ body {
     color: white;
     text-align: center;
     margin: 2rem;
+    width: 90vw;
 }
 
 .howToMobile{
@@ -37,6 +38,7 @@ body {
     color: white;
     text-align: center;
     margin: 0px;
+    width: 90vw;
 }
 
 h1{
