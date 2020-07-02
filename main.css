@@ -1,0 +1,398 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    background: white;
+    background: rgb(18, 198, 235);
+    font-family: 'Pacifico', cursive;
+    color: white;
+
+}
+
+.solla{
+    color: rgb(19, 129, 151);
+}
+
+.howTo{
+    font-family: monospace;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin: 2rem;
+}
+
+h1{
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+}
+.canvasWrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.dpad{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    height: 0vh;
+    color: white;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    
+}
+
+.firstRow{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.secondRow{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.thirdRow{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.up{
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border: 0;
+    border-radius: 50%;
+    background-color:rgb(18, 198, 235);
+    box-shadow: 3px 3px 10px rgba(1, 104, 124, 0.5), -3px -3px 10px rgba(255, 255, 255, 0.726);
+}
+.left{
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border: 0;
+    border-radius: 50%;
+    background-color:rgb(18, 198, 235);
+    box-shadow: 3px 3px 10px rgba(1, 104, 124, 0.5), -3px -3px 10px rgba(255, 255, 255, 0.726);
+}
+
+.empty{
+    height: 40px;
+    width: 40px;
+    border: 0;
+
+}
+
+.right{
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border: 0;
+    border-radius: 50%;
+    background-color:rgb(18, 198, 235);
+    box-shadow: 3px 3px 10px rgba(1, 104, 124, 0.5), -3px -3px 10px rgba(255, 255, 255, 0.726);
+}
+
+.down{
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border: 0;
+    border-radius: 50%;
+    background-color:rgb(18, 198, 235);
+    box-shadow: 3px 3px 10px rgba(1, 104, 124, 0.5), -3px -3px 10px rgba(255, 255, 255, 0.726);
+}
+
+.up:active, .down:active, .left:active, .right:active{
+    border: none;
+    outline: none;
+    box-shadow: inset 3px 3px 10px rgba(1, 104, 124, 0.5), inset -3px -3px 10px rgba(255, 255, 255, 0.726);
+}
+
+.round{
+    content: '';
+    border: 0px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 30px;
+    box-shadow: 3px 3px 10px rgba(1, 104, 124, 0.5), -3px -3px 10px rgba(255, 255, 255, 0.726);
+}
+
+.round:active {
+    border: none;
+    outline: none;
+    box-shadow: inset 3px 3px 10px rgba(1, 104, 124, 0.5), inset -3px -3px 10px rgba(255, 255, 255, 0.726);
+}
+
+
+.black{
+    color: black;
+    background-color: black;
+}
+
+.blue{
+    color: rgb(19, 129, 151);
+    background-color: rgb(19, 129, 151);
+}
+.lightblue{
+    color: rgb(46, 186, 221);
+    background-color: rgb(46, 186, 221);
+}
+.green{
+    color: rgb(30, 196, 127);
+    background-color: rgb(30, 196, 127);
+}
+.yellow{
+    color: rgb(255, 243, 77);
+    background-color: rgb(255, 243, 77);
+}
+.orange{
+    color: rgb(231, 143, 27);
+    background-color: rgb(231, 143, 27);
+}
+
+.red{
+    color: rgb(201, 33, 33);
+    background-color: rgb(201, 33, 33);
+}
+
+.white{
+    color: rgb(56, 56, 56);
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    border: 0px;
+    border-radius: 50%;
+    margin: 30px;
+    box-shadow: 3px 3px 10px rgba(1, 104, 124, 0.5), -3px -3px 10px rgba(255, 255, 255, 0.726);
+}
+
+canvas {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border: 20px solid rgb(18, 198, 235);
+    border-radius: 10px;
+    /* Set the width and height to half the actual size so it doesn't look pixelated */
+    width: 800px;
+    height: 500px;
+    background: white;
+    box-shadow: 10px 10px 32px rgba(1, 104, 124, 0.5), -10px -10px 32px rgba(255, 255, 255, 0.644);
+}
+
+
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+button{
+    text-align: center;
+    border: 0px;
+    border-radius: 10px;
+    background-color: rgb(18, 198, 235);
+    font-family: 'Pacifico', cursive;
+    font-size: 1.4rem;
+    color: white;
+    padding: 10px 40px 10px 40px;
+    box-shadow: 3px 3px 10px rgba(1, 104, 124, 0.5), -3px -3px 10px rgba(255, 255, 255, 0.726);
+    cursor: pointer;
+}
+
+button:active{
+    border: none;
+    outline: none;
+    box-shadow: inset 3px 3px 10px rgba(1, 104, 124, 0.5), inset -3px -3px 10px rgba(255, 255, 255, 0.726);
+}
+button:focus{
+    border: none;
+    outline: none;
+}
+
+canvas.shake {
+    animation: shake 0.5s linear 1;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.cred{
+    color: white;
+    font-family: monospace;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+    }
+        
+    h1{
+        font-size: 2rem;
+        margin-top: 1.5rem;
+    }
+
+    .howTo{
+        font-family: monospace;
+        font-size: 1rem;
+        color: white;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .dpad{
+        visibility: visible;
+        height: 20vh;
+    }
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-content: center;
+        width: 100vw;
+    }
+
+    .canvasWrap{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        flex: none;
+    }
+    .canvas{
+        order: 1;
+    }
+
+    .buttons{
+        order: 3;
+    }
+    .round{
+        content: '';
+        border: 0px;
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        margin: 5px;
+
+    }
+    
+    .round:active {
+        border: none;
+        outline: none;
+        box-shadow: inset 3px 3px 10px rgba(1, 104, 124, 0.5), inset -3px -3px 10px rgba(255, 255, 255, 0.726);
+    }
+    
+    
+    .white{
+        display: flex;
+        color: rgb(56, 56, 56);
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        height: 25px;
+        width: 25px;
+        border: 0px;
+        border-radius: 50%;
+        margin: 5px;
+        box-shadow: 3px 3px 10px rgba(1, 104, 124, 0.5), -3px -3px 10px rgba(255, 255, 255, 0.726);
+    }
+    
+    canvas {
+        margin-left: 3rem;
+        margin-right: 3rem;
+        border: 20px solid rgb(18, 198, 235);
+        border-radius: 10px;
+        /* Set the width and height to half the actual size so it doesn't look pixelated */
+        width: 90vw;
+        height: 35vh;
+        background: white;
+        box-shadow: 10px 10px 32px rgba(1, 104, 124, 0.5), -10px -10px 32px rgba(255, 255, 255, 0.644);
+    }
+    .colorpick{
+        order: 2;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        justify-content: center;
+        flex: none;
+    }
+    
+    
+    .buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        padding: 20px;
+    }
+  }

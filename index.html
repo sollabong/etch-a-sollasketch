@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-SollaSketch</title>
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <h1>Etch-A-<span class="solla">Solla</span>Sketch</h1>
+    <p class="howTo">Choose/Change color, draw with your arrow keys</p>
+    <div class="wrapper">
+        <div class="canvasWrap">
+            <canvas width="1600" height="1000" id="etch-a-sketch"></canvas>
+            <div class="dpad">
+                <div class="firstRow">
+                    <div class="up" onclick='up();'>⯅</div>
+                </div>
+                <div class="secondRow">
+                    <div class="left" onclick='left();'>⯇</div>
+                    <div class="empty"></div>
+                    <div class="right" onclick='right();'>⯈</div>
+                </div>
+                <div class="thirdRow">
+                    <div class="down" onclick='down();'>⯆</div>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="shake shb">Shake</button>
+            </div>
+
+        </div>
+        <div class="colorpick">
+            <div onclick="changeColor('black')" class="black round"></div>
+            <div onclick="changeColor('rgb(19, 129, 151)')" class="blue round"></div>
+            <div onclick="changeColor('rgb(46, 186, 221)')" class="lightblue round"></div>
+            <div onclick="changeColor('rgb(30, 196, 127)')" class="green round"></div>
+            <div onclick="changeColor('rgb(255, 243, 77)')" class="yellow round"></div>
+            <div onclick="changeColor('rgb(231, 143, 27)')" class="orange round"></div>
+            <div onclick="changeColor('rgb(201, 33, 33)')" class="red round"></div>
+            <div onclick="changeColor('white')" class="white"><i class="fa fa-times"></i></div>
+        </div>
+
+    </div>
+    <div class="credits">
+        <span class="cred">Created by <a href="https://sollabong.com" target="_blank">Sollabong</a> 2020. Thanks to
+            WesBos
+        </span>
+    </div>
+
+    <script src="./etch-a-sketch.js"></script>
+
+
+</body>
+
+</html>
