@@ -1,2 +1,6 @@
 # etch-a-sollasketch
-SImple Etch A Solla Sketch drawing table. Works on desktop and also on mobile phones. HTML, Javascript, CSS
+Etch A Solla Sketch drawing table.
+
+Canvas fun 
+Works on desktop and also on mobile phones. 
+HTML, Javascript, CSS
